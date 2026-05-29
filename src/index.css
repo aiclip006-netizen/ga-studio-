@@ -1,0 +1,59 @@
+@import "@fontsource/cormorant-garamond/300.css";
+@import "@fontsource/cormorant-garamond/500.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/italiana/400.css";
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0A0707;
+  --color-bg-surface: #15100E;
+  --color-bg-elevated: #1F1815;
+  --color-brand-maroon: #6B0F1A;
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-soft: #E8C766;
+  --color-brand-emerald: #0F5132;
+  --color-ivory: #F5E9D3;
+  --color-ivory-muted: #A89F8C;
+  
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-accent: "Italiana", serif;
+
+  --text-display: clamp(3rem, 8vw, 7.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --text-h2: clamp(2rem, 3.5vw, 3rem);
+  --text-h3: clamp(1.5rem, 2.2vw, 2rem);
+  --text-body: clamp(1rem, 1.1vw, 1.125rem);
+  --text-small: 0.875rem;
+  --text-micro: 0.75rem;
+}
+
+@layer base {
+  :root {
+    --line: rgba(212,175,55,0.15);
+    --overlay-dark: rgba(10,7,7,0.65);
+  }
+  
+  html {
+    background-color: var(--color-bg-base);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
